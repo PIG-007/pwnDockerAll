@@ -1,0 +1,11 @@
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu artful main restricted universe multiverse
+#deb-src https://mirrors.ustc.edu.cn/ubuntu/ artful main restricted universe multiverse
+ 
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu artful-security main restricted universe multiverse
+#deb-src https://mirrors.ustc.edu.cn/ubuntu/ artful-security main restricted universe multiverse
+ 
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu artful-updates main restricted universe multiverse
+#deb-src https://mirrors.ustc.edu.cn/ubuntu/ artful-updates main restricted universe multiverse
+ 
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu artful-backports main restricted universe multiverse
+#deb-src https://mirrors.ustc.edu.cn/ubuntu/ artful-backports main restricted universe multiverse

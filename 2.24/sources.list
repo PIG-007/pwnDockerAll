@@ -1,0 +1,15 @@
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ zesty main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ zesty main restricted universe multiverse
+
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ zesty-security main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ zesty-security main restricted universe multiverse
+
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ zesty-updates main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ zesty-updates main restricted universe multiverse
+
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ zesty-backports main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ zesty-backports main restricted universe multiverse
+
+## Not recommended
+# deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ zesty-proposed main restricted universe multiverse
+# deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ zesty-proposed main restricted universe multiverse

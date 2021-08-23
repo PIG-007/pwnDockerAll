@@ -1,0 +1,9 @@
+#！ /bin/bash
+
+if [ $# != 2 ] ; then
+echo "Usage:dockerpwn_run [pwnfileDir] [docker_images_name]"
+echo "Example:dockerpwn_run PIG007 2.23 "
+exit 1;
+fi
+
+sudo docker run -it --rm --privileged=true -v $(pwd)/"$1":/ctf/"$1" "$2" /bin/bash
