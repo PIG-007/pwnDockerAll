@@ -32,3 +32,4 @@ docker rm $conName
 docker rmi $version_ubuntu
 chmod a+x dockerpwn_run
 cp dockerpwn_run /usr/bin
+echo "Successful.Just try it!"
