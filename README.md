@@ -17,6 +17,9 @@ cd ~/
 git clone https://github.com/PIG-007/pwnDockerAll.git 
 #git clone https://gitee.com/Piggy007/pwnDockerAll.git
 cd pwnDockerAll
+chmod a+x setup.sh
+chmod a+x install.sh
+chmod a+x dockerpwn_run
 sudo ./setup.sh
 ```
 
