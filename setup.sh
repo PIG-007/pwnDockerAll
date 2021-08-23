@@ -25,6 +25,8 @@ docker run -d --name $conName $version_ubuntu /bin/bash -c 'cd && ./install.sh'
 version_images=$version_glibc
 docker cp ./$version_glibc/sources.list $conName:/etc/apt
 docker cp ./install.sh $conName:/root/
+docker cp ./soft/setuptools-36.6.0.zip $conName:/root/
+docker cp ./soft/pip-9.0.1.tar.gz $conName:/root/
 
 #start download
 docker start $conName

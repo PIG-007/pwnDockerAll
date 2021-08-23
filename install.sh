@@ -24,6 +24,7 @@ apt-get -y install libmysqlclient-dev
 unzip setuptools-36.6.0.zip
 cd setuptools-36.6.0
 python2 setup.py install
+python3 setup.py install
 cd ../
 tar -zxvf pip-9.0.1.tar.gz
 cd pip-9.0.1
@@ -53,5 +54,4 @@ git clone https://gitee.com/Piggy007/Pwngdb.git
 cp ~/Pwngdb/.gdbinit ~/
 sed -i 'N;2 i source ~/pwndbg/gdbinit.py' ~/.gdbinit
 git clone https://gitee.com/Piggy007/peda.git
-
-
+apt -y autoremove
