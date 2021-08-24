@@ -31,7 +31,7 @@ Change path to the pwn topic
 
 ```bash
 dockerPwnRun [pwnfileDir] [docker_images_name]
-dockerPwnRun [pwnfileDir] [docker_images_name] -g
+dockerPwnRun [pwnfileDir] [docker_images_name] -g [port]
 ```
 
 And the pwnfileDir is on /ctf/
