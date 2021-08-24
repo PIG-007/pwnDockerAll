@@ -1,0 +1,34 @@
+#! /bin/bash
+
+terminalList=(gnome-terminal xterm xfce4-terminal)
+
+
+for terminal in `cat ~/pwnDockerAll/terminalConfig`
+do
+    for i in ${terminalList[*]}; 
+    do
+        if [ $i == ${terminal} ];then
+            if [ "${terminal}" == "gnome-terminal" ];then
+                #echo "gnome-terminal"
+                sudo gnome-terminal -- bash -c "~/pwnDockerAll/dockerGDBOut;exec bash"
+                exit 1;
+            fi
+            if [ "${terminal}" == "xterm" ];then
+                #echo "xterm"
+                sudo xterm -e "~/pwnDockerAll/dockerGDBOut && /bin/bash"
+                exit 1;
+                #${terminal} -- bash -c "~/pwnDockerAll/dockerGDBOut;exec bash"
+            fi
+            if [ "${terminal}" == "xfce4-terminal" ];then
+                #echo "gnome-terminal"
+                sudo xfce4-terminal -x bash -c "~/pwnDockerAll/dockerGDBOut;exec bash"
+                exit 1;
+            fi
+
+        else
+            continue
+        fi
+    done
+done
+
+echo "No such terminal!"

@@ -1,0 +1,29 @@
+#! /bin/bash
+
+set -- `getopt g:h "$@"`
+
+if [ $# == 1 ] ; then
+echo "dockerPwnRun -h"
+exit 1;
+fi
+
+while [ -n "$1" ]
+do
+    case "$1" in
+     -g)sudo socat tcp-listen:"$2",reuseaddr,fork EXEC:dockerTerm,pty,raw,echo=0 &
+            shift ;;
+     -h)echo "Usage         :dockerPwnRun [pwnfileDir] [docker_images_name]"
+        echo "Example       :dockerPwnRun PIG007 2.23"
+        echo "Example(gdb)  :dockerPwnRun PIG007 2.23 -g 30001"
+            exit 1;;
+     # -c) echo "found option c, no param." ;;
+     --) ;;
+     *) #echo "what's this?" 
+        break ;;
+    esac
+    shift
+done
+
+
+sudo docker run -it --network host --name "$2" --rm --privileged=true -v $(pwd)/"$1":/ctf/"$1" "$2" /bin/bash -c 'cd /ctf/ && /bin/bash'
+sudo ps -ef | grep dockerTerm | grep -v grep | awk '{print $2}'|sudo xargs -r kill

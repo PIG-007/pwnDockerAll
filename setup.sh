@@ -16,21 +16,37 @@ version_glibc="$1"
 version_ubuntu="ubuntu:${dic["$1"]}"
 conName="con$version_glibc"
 
-
-
 #creat docker and previous work
 docker pull $version_ubuntu
 docker run -d --name $conName $version_ubuntu /bin/bash -c 'cd && ./install.sh'
 
 version_images=$version_glibc
-docker cp ./sources/$version_glibc/sources.list $conName:/etc/apt
+
+#add something to docker
+docker cp ./ubuntuSources/$version_glibc/sources.list $conName:/etc/apt
 docker cp ./install.sh $conName:/root/
 docker cp ./soft/setuptools-36.6.0.zip $conName:/root/
 docker cp ./soft/pip-9.0.1.tar.gz $conName:/root/
+docker cp ./dockerGDBIn $conName:/usr/bin/
+
+
+##gdb sources----------------------------------------
+# wget -P ./glibcFile/$version_images/ http://ftp.gnu.org/gnu/glibc/glibc-$version_images.tar.gz
+# tar -zxvf ./glibcFile/$version_images/glibc-$version_images.tar.gz -C ./glibcFile/$version_images/
+# docker cp ./glibcFile/$version_images/glibc-$version_images/ $conName:/root/glibc-src/
+##-----when use docker gdb need to add:
+##dir /root/glibc-src/malloc
+
 
 #start download
 docker start $conName
 docker logs -f $conName
+
+
+##add your own thing here----------------------------
+#docker exec $conName /bin/bash -c "sed -i 'N;6 i dir ~/glibc-src/malloc' ~/.gdbinit"
+
+
 docker commit -m "pwn" -a "PIG-007" $conName $version_images
 docker stop $conName
 
@@ -49,5 +65,14 @@ docker rm $conName
 docker rmi $version_ubuntu
 
 #get command
-chmod a+x dockerpwn_run
-cp dockerpwn_run /usr/bin
+chmod a+x install.sh
+chmod a+x dockerPwnRun
+chmod a+x dockerTerm
+chmod a+x dockerGDBIn
+chmod a+x dockerGDBOut
+
+cp dockerPwnRun /usr/bin/
+cp dockerTerm /usr/bin/
+# cp dockerGDBOut /usr/bin/
+
+

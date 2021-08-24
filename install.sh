@@ -1,23 +1,24 @@
 #! /bin/bash
 
 apt-get -y update
-apt-get -y install tzdata
-apt-get -y  install vim
-apt-get -y  install libxml2-dev
-apt-get -y  install libxslt-dev
-apt-get -y  install libterm-readkey-perl
-apt-get -y  install python-dev
-apt-get -y  install wget
-apt-get -y  install gcc
-apt-get -y  install make
-apt-get -y  install zip
-apt-get -y install python-setuptools python-pip python-smbus
-apt-get -y install build-essential libncursesw5-dev libgdbm-dev libc6-dev
-apt-get -y install zlib1g-dev libsqlite3-dev tk-dev
-apt-get -y install libssl-dev openssl
-apt-get -y install libffi-dev
-apt-get -y install virtualenv
+apt-get -y install vim
+apt-get -y install libxml2-dev
+apt-get -y install libxslt-dev
 apt-get -y install libmysqlclient-dev
+apt-get -y install libsqlite3-dev
+apt-get -y install zlib1g-dev
+apt-get -y install python-dev
+apt-get -y install libffi-dev
+apt-get -y install libssl-dev
+apt-get -y install wget
+apt-get -y install gcc
+apt-get -y install make
+apt-get -y install zip
+apt-get -y install build-essential python-setuptools python-pip python-smbus
+apt-get -y install libncursesw5-dev libgdbm-dev libc6-dev
+apt-get -y install tk-dev
+apt-get -y install openssl
+apt-get -y install virtualenv
 
 
 
@@ -53,5 +54,5 @@ cd ../
 git clone https://gitee.com/Piggy007/Pwngdb.git
 cp ~/Pwngdb/.gdbinit ~/
 sed -i 'N;2 i source ~/pwndbg/gdbinit.py' ~/.gdbinit
-git clone https://gitee.com/Piggy007/peda.git
+#git clone https://gitee.com/Piggy007/peda.git
 apt -y autoremove

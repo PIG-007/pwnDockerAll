@@ -1,0 +1,3 @@
+#! /bin/bash
+
+gdb attach `ps x | grep -v grep | grep Ss+ | awk '{print $1}'`
