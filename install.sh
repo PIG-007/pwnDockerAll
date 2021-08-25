@@ -1,6 +1,7 @@
 #! /bin/bash
 
 apt-get -y update
+apt-get -y install tzdata
 apt-get -y install vim
 apt-get -y install libxml2-dev
 apt-get -y install libxslt-dev
