@@ -80,7 +80,13 @@ dic=([2.19]="14.04" [2.23]="16.04"  [2.24]="17.04" [2.26]="17.10"
 
 ### 支持GDB attach功能
 
-使用时加入-g参数，并指定端口即可使用类似 `gdb.attach(p)` 的功能
+使用时加入-g参数，并指定端口即可使用类似 `gdb.attach(p)` 的功能，这个功能需要安装`socat`
+
+```
+apt-get install socat
+```
+
+然后就类似如下启动语句：
 
 ```bash
 dockerPwnRun [pwnfileDir] [docker_images_name] -g 30001
@@ -149,3 +155,4 @@ docker cp file $version_images:/root/
 ### 安装其他软件
 
 可以在文件`install.sh`安装其他软件来实现其他功能
+
