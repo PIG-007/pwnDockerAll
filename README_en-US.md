@@ -38,7 +38,7 @@ dockerPwnRun [pwnfileDir] [docker_images_name] -g [port]
 
 And the pwnfileDir is on /ctf/
 
-![Snipaste_2021-08-24_21-27-40](https://i.loli.net/2021/08/24/dCtDygz936Lmvbl.png)
+![](https://pig-007.oss-cn-beijing.aliyuncs.com/img/20210827215910.png)
 
 The pwnfileDir is mapped to the docker from host machine.So,you could change it just under the host machine.
 

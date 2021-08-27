@@ -38,7 +38,7 @@ dockerPwnRun [pwnfileDir] [docker_images_name] -g [port]
 
 映射的PWN文件目录在/ctf/下
 
-![Snipaste_2021-08-24_21-27-40](https://i.loli.net/2021/08/24/dCtDygz936Lmvbl.png)
+![Snipaste_2021-08-27_21-58-42](https://pig-007.oss-cn-beijing.aliyuncs.com/img/20210827215851.png)
 
 由于PWN文件目录是从宿主机映射到容器中的，所以你可以在宿主机中修改文件`exp.py`。
 
