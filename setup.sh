@@ -6,17 +6,31 @@ echo "Example:./setup.sh 2.23"
 exit 1;
 fi
 
+
+
 declare -A dic
 dic=([2.23]="16.04"  [2.24]="17.04" [2.26]="17.10"
     [2.27]="18.04"  [2.28]="18.10" [2.29]="19.04"
     [2.30]="19.10"  [2.31]="20.04" [2.32]="20.10"
     [2.33]="21.04" [2.34]="22.04")
 
+
+if [ ! ${dic["$1"]} ]; then  
+    
+    echo "Unkonw error"
+    exit 1;
+else
+    echo "Get"
+fi
+
+
 version_glibc="$1"
 version_ubuntu="ubuntu:${dic["$1"]}"
 conName="con$version_glibc"
 
 #creat docker and previous work
+mkdir -p /etc/docker
+sudo cp ./dockerSources/daemon.json /etc/docker/
 docker pull $version_ubuntu
 docker run -d --name $conName $version_ubuntu /bin/bash -c 'cd && ./install.sh'
 

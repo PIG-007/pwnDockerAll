@@ -31,9 +31,14 @@ cd ../
 tar -zxvf pip-9.0.1.tar.gz
 cd pip-9.0.1
 python2 setup.py install
+python3 setup.py install
+
 python2 -m pip install --upgrade pip
 python3 setup.py install
 python3 -m pip install --upgrade pip
+pip2 config set global.index-url https://pypi.douban.com/simple/
+pip3 config set global.index-url https://pypi.douban.com/simple/
+
 cd ../
 pip2 install pathlib2
 pip2 install pwntools
