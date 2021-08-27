@@ -1,0 +1,15 @@
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ disco main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ disco main restricted universe multiverse
+
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ disco-security main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ disco-security main restricted universe multiverse
+
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ disco-updates main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ disco-updates main restricted universe multiverse
+
+deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ disco-backports main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ disco-backports main restricted universe multiverse
+
+## Not recommended
+# deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ disco-proposed main restricted universe multiverse
+# deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ disco-proposed main restricted universe multiverse
