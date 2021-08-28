@@ -31,6 +31,7 @@ conName="con$version_glibc"
 #creat docker and previous work
 mkdir -p /etc/docker
 sudo cp ./dockerSources/daemon.json /etc/docker/
+systemctl restart docker
 docker pull $version_ubuntu
 docker run -d --name $conName $version_ubuntu /bin/bash -c 'cd && ./install.sh'
 
