@@ -1,15 +1,15 @@
-deb http://mirrors.ustc.edu.cn/ubuntu/ hirsute main restricted universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu/ hirsute main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
 
-deb http://mirrors.ustc.edu.cn/ubuntu/ hirsute-security main restricted universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu/ hirsute-security main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
 
-deb http://mirrors.ustc.edu.cn/ubuntu/ hirsute-updates main restricted universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu/ hirsute-updates main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
 
-deb http://mirrors.ustc.edu.cn/ubuntu/ hirsute-backports main restricted universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu/ hirsute-backports main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
 
 ## Not recommended
-# deb http://mirrors.ustc.edu.cn/ubuntu/ hirsute-proposed main restricted universe multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ hirsute-proposed main restricted universe multiverse
+# deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
